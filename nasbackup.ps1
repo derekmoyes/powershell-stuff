@@ -36,6 +36,7 @@ $SMTPPort = "587"
 $credentials = new-object Management.Automation.PSCredential "youremail@example.com", ("YOURPASSWORD" | ConvertTo-SecureString -AsPlainText -Force)
 
 # Start backup process
+##############################################################################
  if ($path -eq $true) {
    cd backup:\
    Add-Content $backup_log "Backup starting $date `n"
