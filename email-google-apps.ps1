@@ -12,7 +12,7 @@ $credentials = new-object Management.Automation.PSCredential "youremail@example.
 
 # Actually do the work
 ##############################################################################
-Send-MailMessage -From $From -to $To -Subject $Subject `
+Send-MailMessage -From $From -To $To -Cc $Cc -Subject $Subject `
 -Body $Body -SmtpServer $SMTPServer -port $SMTPPort -UseSsl `
 -Credential $credentials -Attachments $Attachment
 
