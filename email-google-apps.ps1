@@ -3,6 +3,7 @@
 $From = "youremail@example.com"
 $To = "youremail@example.com"
 $Cc = "youremail@example.com"
+# Remember if the attachment is too large, the email send will time out. 
 $Attachment = "C:\important_log_file.log"
 $Subject = "Test Subject"
 $Body = "Test Success!"
