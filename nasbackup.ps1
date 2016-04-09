@@ -33,7 +33,7 @@ $Body = "Backup complete. Log file of backup $date is attached."
 $Attachment = $backup_log
 $SMTPServer = "smtp.gmail.com"
 $SMTPPort = "587"
-$credentials = new-object Management.Automation.PSCredential "youremail@example.com", ("REDACTED" | ConvertTo-SecureString -AsPlainText -Force)
+$credentials = new-object Management.Automation.PSCredential "youremail@example.com", ("YOURPASSWORD" | ConvertTo-SecureString -AsPlainText -Force)
 
 # Start backup process
  if ($path -eq $true) {
