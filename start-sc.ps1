@@ -2,7 +2,7 @@
 # Runs the requirements for Star Citizen, then starts the launcher.
 # 20200330 01:03 Derek Moyes <derek.moyes at gmail dot com>
 #
-# To run this script from the command prompt, aor from a shortcut, you'll need to change the 
+# To run this script from the command prompt, or from a shortcut, you'll need to change the 
 #   Execution Policy for PowerShell scripts, like this:
 #   ps> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 #   https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7
