@@ -7,6 +7,9 @@
 #   ps> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 #   https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7
 
+# Set this variable, in Gigabytes, to determine how much RAM your system should ask for, before Star Citizen runs. 
+$ramneeded = 11
+
 clear
 
 # Start JoyToKey
@@ -21,11 +24,11 @@ Start-Process -FilePath "C:\Program Files\GameGlass\launcher.exe" -WorkingDirect
 
 # Check free memory
 $freemem = Get-WmiObject -Class Win32_OperatingSystem
-While (([math]::round(($freemem.FreePhysicalMemory / 1024 / 1024), 2)) -lt 10)
+While (([math]::round(($freemem.FreePhysicalMemory / 1024 / 1024), 2)) -lt $ramneeded)
     {
 	""
 	""
-	"=== Free Memory Under 10GB, currently {0} GB ===" -f ([math]::round(($freemem.FreePhysicalMemory / 1024 / 1024), 2))
+	"=== Free Memory Under $ramneeded GB, currently {0} GB ===" -f ([math]::round(($freemem.FreePhysicalMemory / 1024 / 1024), 2))
 	""
 	""
 	Read-Host -Prompt "Free up some RAM, then press Enter to continue"
