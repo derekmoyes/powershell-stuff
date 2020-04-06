@@ -38,7 +38,7 @@ While (([math]::round(($freemem.FreePhysicalMemory / 1024 / 1024), 2)) -lt $ramn
 
 # Wait a number of seconds for GameGlass to start.
 $sleepseconds = 10
-"=== Waiting $sleepseconds for GameGlass to start ==="
+"=== Waiting $sleepseconds seconds for GameGlass to start ==="
 Start-Sleep -Second $sleepseconds
 
 # Start Star Citizen Launcher
